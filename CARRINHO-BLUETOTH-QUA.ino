@@ -29,5 +29,14 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if (Serial.available()){
+    t = Serial.read();
 
+    if(t == 'F'){
+      digitalWrite(IN1,HIGH);
+      digitalWrite(IN2,LOW);
+      digitalWrite(IN3,LOW);
+      digitalWrite(IN4,HIGH);
+    }
+  }
 }
